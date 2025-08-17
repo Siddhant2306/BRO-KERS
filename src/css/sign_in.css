@@ -1,0 +1,82 @@
+.signin-btn {
+  position: relative;
+  overflow: hidden;
+  padding: 12px 24px;
+  border: 2px solid #007bff;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  background-color: lightblue;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #ffffff;
+  transform: translateY(100%);
+  transition: transform 0.3s ease-in-out;
+  z-index: 0;
+}
+
+.btn-text {
+  position: relative;
+  z-index: 1;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+/* Change text color when button is hovered */
+.signin-btn:hover .btn-text {
+  color: black;
+}
+
+
+/* Page background styles */
+body.light-mode {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+  background-color: black;
+  color: white;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Button base style */
+.mode-btn {
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-left: 50px; 
+  margin-top: 20px;
+  
+}
+
+/* Light mode button colors */
+.mode-btn.light {
+  background-color: blue;
+}
+
+.mode-btn.light.hover {
+  background-color: darkblue;
+  transform: scale(1.05);
+}
+
+/* Dark mode button colors */
+.mode-btn.dark {
+  background-color: #444;
+}
+
+.mode-btn.dark.hover {
+  background-color: #222;
+  transform: scale(1.05);
+}
