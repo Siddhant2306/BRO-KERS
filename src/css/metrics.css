@@ -1,0 +1,6 @@
+.metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem;padding:1.25rem}
+.metric{background:var(--surface);border:1px solid rgba(255,255,255,.06);border-radius:14px;padding:1.25rem;text-align:center}
+.metric-value{font-size:1.8rem;font-weight:800}
+.metric-label{opacity:.8}
+@media (max-width:900px){.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.metrics{grid-template-columns:1fr}}

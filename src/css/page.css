@@ -1,0 +1,6 @@
+.page{max-width:900px;margin:0 auto;padding:2rem 1.25rem}
+.page h2{margin-top:0}
+.form{display:grid;gap:.8rem;max-width:560px}
+.form label{display:grid;gap:.35rem}
+.form input,.form textarea{padding:.7rem .85rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:var(--surface);color:var(--text)}
+.faq{background:var(--surface);border:1px solid rgba(255,255,255,.08);padding:1rem;border-radius:12px;margin:.75rem 0}

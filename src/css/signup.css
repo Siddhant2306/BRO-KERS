@@ -1,11 +1,11 @@
-.signin-container {
+.signup-container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 80vh;
 }
 
-.signin-form {
+.signup-form {
   background: var(--card-bg);
   padding: 2rem;
   border-radius: 12px;
@@ -15,13 +15,13 @@
   gap: 1rem;
 }
 
-.signin-form input {
+.signup-form input {
   padding: 0.8rem;
   border: 1px solid #ccc;
   border-radius: 8px;
 }
 
-.signin-form button {
+.signup-form button {
   padding: 0.8rem;
   border: none;
   border-radius: 8px;
@@ -31,7 +31,7 @@
   cursor: pointer;
 }
 
-.signin-form .link {
+.signup-form .link {
   color: var(--accent);
   cursor: pointer;
   font-weight: bold;

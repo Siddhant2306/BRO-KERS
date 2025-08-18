@@ -1,52 +1,40 @@
-import { useState } from "react";
-import "../css/navbar.css";
+import React from 'react'
+import { NavLink, Link } from 'react-router-dom'
+import { useAuth } from "../context/AuthContext";
+import ModeChanger from './ModeChanger'
+import '../css/navbar.css'
 
-function DrawHoverButtons(name, link) {
-  const [hover, setHover] = useState(false);
-
-  const currentPath = window.location.pathname; 
-  const isActive = currentPath === link;
-
-  let bg_color = isActive ? "blue" : hover ? "blue" : "gray";
+export default function NavBar() {
+  const { user, logout } = useAuth();
 
   return (
-    <a href={link}>
-      <button
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
-        style={{
-          backgroundColor: bg_color,
-          color: "white",
-        }}
-      >
-        {name}
-      </button>
-    </a>
-  );
-}
+    <header className="navbar">
+      <Link to="/" className="brand">BRO-KERS</Link>
 
-function DrawHomeLinks(isHome = false) {
-  if (isHome) {
-    return (
-      <div className="navbar-link-container">
-        <a href="/"> </a>
-        {DrawHoverButtons("Home", "/Home")}
-        {DrawHoverButtons("Guide", "/Guide")}
-        {DrawHoverButtons("Contact", "#contact")}
+      <nav className="navlinks">
+        <NavLink to="/" end>Home</NavLink>
+        <NavLink to="/features">Features</NavLink>
+        <NavLink to="/properties">Properties</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/faq">FAQ</NavLink>
+        <NavLink to="/contact">Contact</NavLink>
+      </nav>
+
+      <div className="nav-actions">
+        <ModeChanger />
+
+        {user ? (
+          <>
+            <span className="welcome">Hi, {user.username}</span>
+            <button onClick={logout} className="btn secondary">Logout</button>
+          </>
+        ) : (
+          <>
+            <Link to="/signin" className="btn secondary">Sign In</Link>
+            <Link to="/signup" className="btn primary">Sign Up</Link>
+          </>
+        )}
       </div>
-    );
-  }
-  return (
-    <div className="navbar-link-container">
-      <a href="/"> </a>
-      {DrawHoverButtons("Guide", "/Guide")}
-      {DrawHoverButtons("Contact", "#contact")}
-    </div>
+    </header>
   );
 }
-
-function DrawHomeNavBar(isHome = false) {
-  return <div className="navbar-static">{DrawHomeLinks(isHome)}</div>;
-}
-
-export default DrawHomeNavBar;

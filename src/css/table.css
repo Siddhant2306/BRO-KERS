@@ -1,0 +1,4 @@
+.table-wrap{overflow:auto}
+.table{width:100%;border-collapse:collapse;min-width:640px;background:var(--surface);border-radius:12px;overflow:hidden}
+.table th,.table td{padding:.85rem 1rem;border-bottom:1px solid rgba(255,255,255,.06);text-align:left}
+.table thead th{background:linear-gradient(180deg,rgba(255,255,255,.06),rgba(255,255,255,0))}

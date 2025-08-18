@@ -1,0 +1,11 @@
+.footer{margin-top:2rem;padding:2rem 1.25rem;background:linear-gradient(180deg,rgba(255,255,255,.02),rgba(255,255,255,.04));border-top:1px solid rgba(255,255,255,.06)}
+.footer .grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1.25rem}
+.footer h4{margin:.25rem 0 1rem}
+.footer h5{margin:.25rem 0 .75rem}
+.footer ul{list-style:none;padding:0;margin:0;display:grid;gap:.4rem}
+.footer a{text-decoration:none;opacity:.9}
+.newsletter{display:flex;gap:.5rem}
+.newsletter input{flex:1;padding:.6rem .75rem;border-radius:10px;border:1px solid rgba(255,255,255,.15);background:var(--surface);color:var(--text)}
+.fineprint{margin-top:1.25rem;opacity:.7;font-size:.9rem}
+@media (max-width: 880px){.footer .grid{grid-template-columns:1fr 1fr}.navlinks{display:none}}
+@media (max-width: 560px){.footer .grid{grid-template-columns:1fr}}
