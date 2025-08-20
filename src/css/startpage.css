@@ -1,0 +1,76 @@
+.startpage-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: var(--background);
+  color: var(--text);
+}
+
+/* Custom Animation Background */
+.animation-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.animation-bg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  filter: blur(20px); 
+  opacity: 0.8; 
+}
+
+.start-card {
+  position: relative;
+  z-index: 1;
+  padding: 2rem 3rem;
+  background: var(--card-bg);
+  border-radius: 1rem;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.title {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: var(--text);
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.role-btn {
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+  background: linear-gradient(135deg, #4f46e5, #9333ea); /* gradient background */
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* subtle shadow */
+  transition: transform 0.2s ease, box-shadow 0.3s, background 0.3s;
+}
+
+.role-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* stronger shadow on hover */
+  background: linear-gradient(135deg, #9333ea, #4f46e5); /* reverse gradient on hover */
+}

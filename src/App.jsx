@@ -6,6 +6,8 @@ import Footer from "./components/Footer";
 import { AuthProvider } from "./context/AuthContext";
 
 // Pages
+import StartPage from "./pages/startpage";
+import BuilderPage from "./pages/Builder";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Features from "./pages/Features";
@@ -23,8 +25,11 @@ export default function App() {
         <Navbar />
         <main className="content">
           <Routes>
+            {/* Landing Page */}
+            <Route path="/" element={<StartPage />} />
+
             {/* Public Pages */}
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/about" element={<About />} />
             <Route path="/features" element={<Features />} />
             <Route path="/properties" element={<Properties />} />
@@ -35,6 +40,9 @@ export default function App() {
             {/* Auth Pages */}
             <Route path="/signin" element={<SignIn />} />
             <Route path="/signup" element={<SignUp />} />
+
+            {/* Builder Dashboard */}
+            <Route path="/builder" element={<BuilderPage />} />
           </Routes>
         </main>
         <Footer />

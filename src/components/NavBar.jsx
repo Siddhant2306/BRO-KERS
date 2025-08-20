@@ -3,6 +3,7 @@ import { NavLink, Link } from 'react-router-dom'
 import { useAuth } from "../context/AuthContext";
 import ModeChanger from './ModeChanger'
 import '../css/navbar.css'
+import "../assets/logo.png"
 
 export default function NavBar() {
   const { user, logout } = useAuth();
@@ -38,3 +39,4 @@ export default function NavBar() {
     </header>
   );
 }
+
